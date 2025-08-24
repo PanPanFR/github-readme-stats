@@ -41,7 +41,7 @@ const UNIFIED_GRAPHQL_QUERY = `
       }
       
       # Repositories (paginated)
-      repositories(first: 100, ownerAffiliations: OWNER, isFork: true, orderBy: {field: STARGAZERS, direction: DESC}, after: $after) {
+      repositories(first: 100, ownerAffiliations: OWNER, orderBy: {field: STARGAZERS, direction: DESC}, after: $after) {
         totalCount
         nodes {
           name
