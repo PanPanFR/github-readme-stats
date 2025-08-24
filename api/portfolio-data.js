@@ -20,7 +20,7 @@ export default async (req, res) => {
       parseArray(exclude_repo),
     );
     if (data) {
-      const CACHE_SECONDS = cache_seconds ? parseInt(cache_seconds, 10) : 7200;
+      const CACHE_SECONDS = cache_seconds ? parseInt(cache_seconds, 10) : 1800;
       res.setHeader(
         "Cache-Control",
         `max-age=${CACHE_SECONDS / 2}, s-maxage=${CACHE_SECONDS}`,
